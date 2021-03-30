@@ -1,0 +1,23 @@
+<form method="POST" style="margin-top: 20px;">
+    <div class="mb-3">
+        <label for="name" class="form-label">Nhập việc cần làm</label>
+        <input type="text" class="form-control" id="name" name="name" />
+    </div>
+
+    <div>
+        <button type="submit" class="btn btn-primary">Thêm</button>
+    </div>
+</form>
+
+<table class="table table-striped" style="margin-top: 50px;">
+    <% for (var i = 0; i < todoList.length; i++) { %>
+        <tr>
+            <td> <input type="checkbox" <%- todoList[i].done == true ? 'checked' : ''  %> > </td>
+            <td> <%= todoList[i].name %> </td>
+            <td><a href="#"> Xóa </a></td>
+        </tr>    
+    <% } %>
+    
+
+    
+</table>
